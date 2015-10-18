@@ -1,0 +1,19 @@
+﻿<Window x:Class="AutonomousComputerProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutonomousComputerProgram"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="300" Foreground="Aquamarine" Background="Aqua" Closing="Window_Closing">
+    <Grid>
+        <TextBox x:Name="textBox" Margin="10,236,96,10" TextWrapping="Wrap" Background="Black" Foreground="LightGreen"/>
+        <TextBlock x:Name="textBlock" Margin="10,10,96,38" TextWrapping="Wrap" Background="Black" Foreground="LightGreen"/>
+        <Button x:Name="button" Content="Button" Margin="211,236,6,13"/>
+        <Viewbox x:Name="viewbox1" Margin="204,128,6,41">
+            <Image x:Name="image" Height="121" Width="100"/>
+        </Viewbox>
+
+
+    </Grid>
+</Window>
