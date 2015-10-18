@@ -58,3 +58,6 @@ C:\Users\andre\Source\Workspaces\Workspace\AICHATROBOT\AutonomousComputerProgram
 C:\Users\andre\Source\Workspaces\Workspace\AICHATROBOT\AutonomousComputerProgram\AutonomousComputerProgram\AutonomousComputerProgram\obj\Debug\AutonomousComputerProgram.csproj.GenerateResource.Cache
 C:\Users\andre\Source\Workspaces\Workspace\AICHATROBOT\AutonomousComputerProgram\AutonomousComputerProgram\AutonomousComputerProgram\obj\Debug\AutonomousComputerProgram.exe
 C:\Users\andre\Source\Workspaces\Workspace\AICHATROBOT\AutonomousComputerProgram\AutonomousComputerProgram\AutonomousComputerProgram\obj\Debug\AutonomousComputerProgram.pdb
+C:\Users\andre\Documents\GitHubVisualStudio\AutonomousComputerProgram2\AutonomousComputerProgram\bin\Debug\AutonomousComputerProgram.exe.config
+C:\Users\andre\Documents\GitHubVisualStudio\AutonomousComputerProgram2\AutonomousComputerProgram\obj\Debug\AutonomousComputerProgram.exe
+C:\Users\andre\Documents\GitHubVisualStudio\AutonomousComputerProgram2\AutonomousComputerProgram\obj\Debug\AutonomousComputerProgram.pdb
