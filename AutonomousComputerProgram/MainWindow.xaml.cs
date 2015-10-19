@@ -25,7 +25,7 @@ using NeuroSky.ThinkGear.Algorithm.EEGTools;
 using Jayrock.Json;
 using NLog;
 
-
+using System.Windows.Shell;
 
 using System.Threading;
 
@@ -70,8 +70,7 @@ namespace AutonomousComputerProgram
         Missy myMissy = new Missy();
         
         private Connector connector;
-
-
+        
 
         public bool avatarDescription { get; private set; }
 
@@ -109,6 +108,8 @@ namespace AutonomousComputerProgram
 
 
             AvatarDescription.CreateRandom(AvatarBodyType.Female);
+            textBox.KeyUp += new System.Windows.Input.KeyEventHandler(textBox_KeyUp);
+
 
             //connector.Find();
             //connector.thinkGearPorts("COM5");
@@ -159,6 +160,8 @@ namespace AutonomousComputerProgram
                 // return false, meaning not currently configured 
                 Console.WriteLine("HelloEEG: MentalEffort normal operation");
             }
+
+
         }
 
         
@@ -273,10 +276,29 @@ namespace AutonomousComputerProgram
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            rawInput = textBox.Text;
-            textBlock.Text = myMissy.getOutput(rawInput);
-            textBox.Text = "";
-            rawInput = null;
+          
+            if (true)
+            {
+                rawInput = textBox.Text;
+                textBlock.Text = myMissy.getOutput(rawInput);
+                textBox.Text = "";
+                rawInput = null;
+            }
+        }
+
+        
+
+        private void textBox_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                //To Do 
+                rawInput = textBox.Text;
+                textBlock.Text = myMissy.getOutput(rawInput);
+                textBox.Text = "";
+                rawInput = null;
+            }
+
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
