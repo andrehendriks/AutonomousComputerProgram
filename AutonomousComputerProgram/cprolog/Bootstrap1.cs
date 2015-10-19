@@ -13,6 +13,7 @@ namespace AutonomousComputerProgram.CProlog
         public static string PredefinedPredicates;
         public class Object
         {
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1821:RemoveEmptyFinalizers")]
             ~Object() { }
             public new virtual bool Equals(object obj) { return (true); }
             public new static bool Equals(object objA, object objB) { return (true); }

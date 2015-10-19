@@ -11,12 +11,14 @@ namespace AutonomousComputerProgram.CProlog
     public class AbortQueryException : System.ApplicationException
     {
         public AbortQueryException() { throw new Exception(); }
+        [Serializable]
         public class ApplicationException : System.Exception
         {
             public ApplicationException() { }
             public ApplicationException(string message) { }
             public ApplicationException(string message, System.Exception innerException) { }
             protected ApplicationException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
+            [Serializable]
             public class Exception
             {
                 public Exception() { }

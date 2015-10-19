@@ -10,25 +10,24 @@ namespace AutonomousComputerProgram.Clips
 {
     public class Deftemplate : CLIPSNet.Wrapper
     {
-        [DllImport("msvcrt.dll")]
-        public static extern CLIPSNet.Fact CreateFact();
-        [DllImport("msvcrt.dll")]
-        public static extern CLIPSNet.DataType SlotAllowedValues(string slot);
-        [DllImport("msvcrt.dll")]
-        public static extern CLIPSNet.DataTypes.Multifield SlotCardinality(string slot);
-        [DllImport("msvcrt.dll")]
-        public static extern CLIPSNet.Deftemplate.DefaultP SlotDefaultP(string slot);
-        [DllImport("msvcrt.dll")]
-        public static extern CLIPSNet.DataType SlotDefaultValue(string slot);
+        public static CLIPSNet.Fact CreateFact() { return CreateFact(); }
+        
+        public static CLIPSNet.DataType SlotAllowedValues(string slot) { return SlotAllowedValues("1"); }
+       
+        public static CLIPSNet.DataTypes.Multifield SlotCardinality(string slot) { return SlotCardinality(""); }
+        
+        public static CLIPSNet.Deftemplate.DefaultP SlotDefaultP(string slot) { return SlotDefaultP(""); }
+        
+        public static CLIPSNet.DataType SlotDefaultValue(string slot) { return SlotDefaultValue(""); }
         public bool SlotExistP(string slot) { return (true); }
         public bool SlotMultiP(string slot) { return (true); }
-        [DllImport("msvcrt.dll")]
-        public static extern CLIPSNet.DataTypes.Multifield SlotNames();
-        [DllImport("msvcrt.dll")]
-        public static extern CLIPSNet.DataType SlotRange(string slot);
+        
+        public static CLIPSNet.DataTypes.Multifield SlotNames() { return SlotNames(); }
+        
+        public static CLIPSNet.DataType SlotRange(string slot) { return SlotRange(""); }
         public bool SlotSingleP(string slot) { return (true); }
-        [DllImport("msvcrt.dll")]
-        public static extern System.Type[] SlotTypes(string slot);
+        
+        public static System.Type[] SlotTypes(string slot) { return SlotTypes(""); }
         public override string ToString() { return ("*"); }
         public bool Undeftemplate() { return (true); }
         public CLIPSNet.Defmodule Defmodule { get; }

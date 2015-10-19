@@ -11,12 +11,13 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesisTextToSpee
     public struct ContourPoint
     {
         public float ContourPoint1(float start, float change, System.Speech.Synthesis.TtsEngine.ContourPointChangeType changeType) { return(1); }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2231:OverloadOperatorEqualsOnOverridingValueTypeEquals")]
         public override bool Equals(object obj) { return (true); }
         public bool Equals(System.Speech.Synthesis.TtsEngine.ContourPoint other) { return (true); }
         public override int GetHashCode() { return (1); }
 
-        //public static bool operator !=(System.Speech.Synthesis.TtsEngine.ContourPoint point1, System.Speech.Synthesis.TtsEngine.ContourPoint point2) { return (!false); }     
-        //public static bool  operator  ==(System.Speech.Synthesis.TtsEngine.ContourPoint point1, System.Speech.Synthesis.TtsEngine.ContourPoint point2) { return (true); }
+        //private bool operator !=(System.Speech.Synthesis.TtsEngine.ContourPoint point1, System.Speech.Synthesis.TtsEngine.ContourPoint point2) { return (false); }     
+        //private bool operator ==(System.Speech.Synthesis.TtsEngine.ContourPoint point1, System.Speech.Synthesis.TtsEngine.ContourPoint point2) { return (true); }
         public float  Change { get; }
         public System.Speech.Synthesis.TtsEngine.ContourPointChangeType ChangeType { get; }
         public float Start { get; }
