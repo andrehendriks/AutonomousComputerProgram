@@ -7,12 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="300" Foreground="Aquamarine" Background="Aqua" Closing="Window_Closing">
     <Grid>
-        <TextBox x:Name="textBox" Margin="10,219,96,10" TextWrapping="Wrap" Background="Black" Foreground="LightGreen" KeyDown="textBox_KeyDown"/>
+        <TextBox x:Name="textBox" Margin="10,0,96,10" TextWrapping="Wrap" Background="Black" Foreground="LightGreen" KeyDown="textBox_KeyDown" Height="40" VerticalAlignment="Bottom"/>
         <TextBlock x:Name="textBlock" Margin="10,10,96,55" TextWrapping="Wrap" Background="Black" Foreground="LightGreen"/>
-        <Button x:Name="button" Content="Enter" Margin="204,219,6,10" Click="button_Click"/>
-        <Viewbox x:Name="viewbox1" Margin="204,131,6,55">
-            <Image x:Name="image" Height="103" Width="100" Source="ColorBitmap.bmp"/>
+        <Button x:Name="button" Content="Enter" Margin="0,0,6,10" Click="button_Click" HorizontalAlignment="Right" Width="82" Height="40" VerticalAlignment="Bottom"/>
+        <Viewbox x:Name="viewbox1" Margin="0,0,6,55" HorizontalAlignment="Right" Width="82" Height="83" VerticalAlignment="Bottom">
+            <Image x:Name="image" Height="103" Width="103" Source="ColorBitmap.bmp"/>
         </Viewbox>
+        <Button x:Name="btn_connect" Content="Connect" Margin="0,10,6,0" Click="btn_connect_Click" HorizontalAlignment="Right" Width="85" Height="30" VerticalAlignment="Top"/>
+        <Button x:Name="btn_disconnect" Content="DisConnect" Margin="0,45,6,0" Click="btn_disconnect_Click" HorizontalAlignment="Right" Width="85" Height="30" VerticalAlignment="Top"/>
 
 
     </Grid>

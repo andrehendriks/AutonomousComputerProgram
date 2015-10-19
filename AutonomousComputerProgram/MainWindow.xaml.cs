@@ -91,20 +91,7 @@ namespace AutonomousComputerProgram
             speechEngine.RecognizeAsync(RecognizeMode.Multiple); // recognize speech
             speechEngine.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(speechEngine_SpeechRecognized);
 
-            connector = new Connector();
-            connector.DeviceConnected += new EventHandler(OnDeviceConnected);
-            connector.DeviceFound += new EventHandler(OnDeviceFound);
-            connector.DeviceNotFound += new EventHandler(OnDeviceNotFound);
-            connector.DeviceConnectFail += new EventHandler(OnDeviceNotFound);
-            connector.DeviceDisconnected += new EventHandler(OnDeviceDisconnected);
-            connector.DeviceValidating += new EventHandler(OnDeviceValidating);
-
-            connector.setMentalEffortEnable(true);
-            connector.setAppreciationEnabled(true);
-            connector.setBlinkDetectionEnabled(false);
-            connector.setMentalEffortRunContinuous(true);
-            connector.setPositivityEnable(true);
-            connector.setRespirationRateEnable(true);
+            
 
 
             AvatarDescription.CreateRandom(AvatarBodyType.Female);
@@ -117,7 +104,7 @@ namespace AutonomousComputerProgram
             //connector.Connect("COM6");
             // Scan for devices across COM ports
             // The COM port named will be the first COM port that is checked.
-            connector.ConnectScan("COM29");
+            
 
             // Blink detection needs to be manually turned on
             // connector.setBlinkDetectionEnabled(true);
@@ -308,10 +295,32 @@ namespace AutonomousComputerProgram
                 sensor.Stop();
             }
             textBlock.Text = "GoodBye!: ";
-            connector.Close();
+            
             Environment.Exit(0);
         }
 
-        
+        private void btn_connect_Click(object sender, RoutedEventArgs e)
+        {
+            connector = new Connector();
+            connector.DeviceConnected += new EventHandler(OnDeviceConnected);
+            connector.DeviceFound += new EventHandler(OnDeviceFound);
+            connector.DeviceNotFound += new EventHandler(OnDeviceNotFound);
+            connector.DeviceConnectFail += new EventHandler(OnDeviceNotFound);
+            connector.DeviceDisconnected += new EventHandler(OnDeviceDisconnected);
+            connector.DeviceValidating += new EventHandler(OnDeviceValidating);
+
+            connector.setMentalEffortEnable(true);
+            connector.setAppreciationEnabled(true);
+            connector.setBlinkDetectionEnabled(false);
+            connector.setMentalEffortRunContinuous(true);
+            connector.setPositivityEnable(true);
+            connector.setRespirationRateEnable(true);
+            connector.ConnectScan("COM31");
+        }
+
+        private void btn_disconnect_Click(object sender, RoutedEventArgs e)
+        {
+            connector.Close();
+        }
     }
 }
