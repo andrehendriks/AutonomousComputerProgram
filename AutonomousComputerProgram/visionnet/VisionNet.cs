@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VisionNET;
 
-namespace AutonomousComputerProgram.visionnet
+namespace AutonomousComputerProgram.VisionNet
 {
     class VisionNet
     {

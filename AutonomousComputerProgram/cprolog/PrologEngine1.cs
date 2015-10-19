@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Prolog;
 using System.Runtime.InteropServices;
 
-namespace AutonomousComputerProgram.cprolog
+namespace AutonomousComputerProgram.CProlog
 {
     public class PrologEngine
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CLIPSNet;
 using System.Runtime.InteropServices;
 
-namespace AutonomousComputerProgram.CLIPS.DataTypes
+namespace AutonomousComputerProgram.Clips.DataTypes
 {
     public class Boolean : CLIPSNet.DataTypes.Symbol
     {

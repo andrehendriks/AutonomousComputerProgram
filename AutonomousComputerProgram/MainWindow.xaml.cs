@@ -51,7 +51,7 @@ using Microsoft.Xna.Framework.Media;
 
 //using WinSimulatorUtilitiesElevatedLib;
 
-using AutonomousComputerProgram.visionnet;
+using AutonomousComputerProgram.VisionNet;
 
 namespace AutonomousComputerProgram
 {

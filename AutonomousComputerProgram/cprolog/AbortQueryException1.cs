@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Prolog;
 
-namespace AutonomousComputerProgram.cprolog
+namespace AutonomousComputerProgram.CProlog
 {
     [Serializable]
     public class AbortQueryException : System.ApplicationException

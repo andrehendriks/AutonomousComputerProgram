@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using NeuroSky.ThinkGear;
 
-namespace AutonomousComputerProgram.mindplay
+namespace AutonomousComputerProgram.MindPlay
 {
     public class HardwareOperation
     {

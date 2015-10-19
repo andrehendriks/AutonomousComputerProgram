@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CLIPSNet;
 
 
-namespace AutonomousComputerProgram.CLIPS.DataTypes
+namespace AutonomousComputerProgram.Clips.DataTypes
 {
     class Multifield
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CLIPSNet;
 using System.Runtime.InteropServices;
 
-namespace AutonomousComputerProgram.CLIPS
+namespace AutonomousComputerProgram.Clips
 {
     public class Fact 
     {

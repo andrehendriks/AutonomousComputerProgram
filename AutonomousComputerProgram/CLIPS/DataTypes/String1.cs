@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CLIPSNet;
 
-namespace ChatBotAutonomousComputerProgram.CLIPS.DataTypes
+namespace ChatBotAutonomousComputerProgram.Clips.DataTypes
 {
     public class String 
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Prolog;
 
 
-namespace AutonomousComputerProgram.cprolog
+namespace AutonomousComputerProgram.CProlog
 {
     public class DoslO
     {

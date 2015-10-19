@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NeuroSky.ThinkGear;
 
-namespace AutonomousComputerProgram.mindplay
+namespace AutonomousComputerProgram.MindPlay
 {
     public class SP_DEVINFO_DATA
     {

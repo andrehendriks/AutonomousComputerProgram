@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NeuroSky.ThinkGear;
 using System.Runtime.InteropServices;
-namespace AutonomousComputerProgram.mindplay
+namespace AutonomousComputerProgram.MindPlay
 {
     public enum SPDRP_
     {

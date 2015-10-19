@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CLIPSNet;
 
-namespace AutonomousComputerProgram.CLIPS
+namespace AutonomousComputerProgram.Clips
 {
     public enum ClassMode
     {

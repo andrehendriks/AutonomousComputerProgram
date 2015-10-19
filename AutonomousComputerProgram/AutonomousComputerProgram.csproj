@@ -48,6 +48,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RunCodeAnalysis>false</RunCodeAnalysis>
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,6 +59,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AutonomousComputerProgram.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Missy.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -66,89 +77,86 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="mindplay\HardwareOperation.cs" />
-    <Compile Include="mindplay\SPDRP_.cs" />
-    <Compile Include="mindplay\SP_DEVINFO_DATA.cs" />
-    <Compile Include="System.Speech.Synthesis.TtsEngine.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\FilePrompt\FilePrompt.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\InstalledVoice\IntalledVoice.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\PhonemeReachedEventArgs\PhonemeReachedEventArgs.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\Prompt.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\PromptBreak\PromptBreak.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\PromptRate\PromptRate.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\Prompt\Prompt.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\PrompVolume\PromptVolume.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\SayAs\SayAs.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\SpeakCompletedEventArgs.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\SpeakCompletedEventArgs\base types\PromptEventArgs.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\SpeechSynthesizer.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\SynthesisMediaType\SynthesisMediaType.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\SynthesisTextFormat\SynthesisTextFormat.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\SynthesizerEmphasis\SynthesizerEmphasis.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\SynthesizerState\SynthesizerState.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\VoiceAge\VoiceAge.cs" />
-    <Compile Include="system.speech\system.speech.synthesis\VoiceGender\VoiceGender.cs" />
+    <Compile Include="MindPlay\HardwareOperation.cs" />
+    <Compile Include="MindPlay\SPDRP_.cs" />
+    <Compile Include="MindPlay\SP_DEVINFO_DATA.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesisTextToSpeechEngine\System_Speech_Synthesis_TTSEngine.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\FilePrompt\FilePrompt.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\InstalledVoice\IntalledVoice.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\PhonemeReachedEventArgs\PhonemeReachedEventArgs.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\PromptBreak\PromptBreak.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\PromptRate\PromptRate.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\Prompt\Prompt.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\PrompVolume\PromptVolume.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\SayAs\SayAs.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\SpeakCompletedEventArgs\BaseTypes\PromptEventArgs.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\SynthesisMediaType\SynthesisMediaType.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\SynthesisTextFormat\SynthesisTextFormat.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\SynthesizerEmphasis\SynthesizerEmphasis.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\SynthesizerState\SynthesizerState.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\VoiceAge\VoiceAge.cs" />
+    <Compile Include="SystemSpeech\SystemSpeechSynthesis\VoiceGender\VoiceGender.cs" />
     <Compile Include="thinkgear\ThinkGear.cs" />
-    <Compile Include="visionnet\VisionNet.cs" />
+    <Compile Include="VisionNet\VisionNet.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CLIPS\Activation1.cs" />
-    <Compile Include="CLIPS\ClassMode1.cs" />
-    <Compile Include="CLIPS\ClipsException1.cs" />
-    <Compile Include="CLIPS\DataType1.cs" />
-    <Compile Include="CLIPS\DataTypes\Boolean1.cs" />
-    <Compile Include="CLIPS\DataTypes\Double1.cs" />
-    <Compile Include="CLIPS\DataTypes\ExternalObject1.cs" />
-    <Compile Include="CLIPS\DataTypes\GenericDataType1.cs" />
-    <Compile Include="CLIPS\DataTypes\InstanceName1.cs" />
-    <Compile Include="CLIPS\DataTypes\Integer1.cs" />
-    <Compile Include="CLIPS\DataTypes\Multifield1.cs" />
-    <Compile Include="CLIPS\DataTypes\String1.cs" />
-    <Compile Include="CLIPS\DataTypes\Symbol1.cs" />
-    <Compile Include="CLIPS\Defclass1.cs" />
-    <Compile Include="CLIPS\Deffacts1.cs" />
-    <Compile Include="CLIPS\Deffunction1.cs" />
-    <Compile Include="CLIPS\Defglobal1.cs" />
-    <Compile Include="CLIPS\Definstances1.cs" />
-    <Compile Include="CLIPS\DefmessageHandler1.cs" />
-    <Compile Include="CLIPS\Defmethod1.cs" />
-    <Compile Include="CLIPS\Defmodule1.cs" />
-    <Compile Include="CLIPS\Defrule1.cs" />
-    <Compile Include="CLIPS\Deftemplate1.cs" />
-    <Compile Include="CLIPS\Degeneric1.cs" />
-    <Compile Include="CLIPS\Fact1.cs" />
-    <Compile Include="CLIPS\GenericEnumerator1.cs" />
-    <Compile Include="CLIPS\Router1.cs" />
-    <Compile Include="CLIPS\SalienceEvaluation1.cs" />
-    <Compile Include="CLIPS\SaveScope1.cs" />
-    <Compile Include="CLIPS\Strategy1.cs" />
-    <Compile Include="CLIPS\UserFunction1.cs" />
-    <Compile Include="CLIPS\WatchItem1.cs" />
-    <Compile Include="CLIPS\Wrapper1.cs" />
-    <Compile Include="cprolog\AbortQueryException1.cs" />
-    <Compile Include="cprolog\AssocType1.cs" />
-    <Compile Include="cprolog\Basiclo.cs" />
-    <Compile Include="cprolog\BI1.cs" />
-    <Compile Include="cprolog\Bootstrap1.cs" />
-    <Compile Include="cprolog\CachePort1.cs" />
-    <Compile Include="cprolog\DosIO1.cs" />
-    <Compile Include="cprolog\DupMode1.cs" />
-    <Compile Include="cprolog\Exctensions1.cs" />
-    <Compile Include="cprolog\FileIO1.cs" />
-    <Compile Include="cprolog\ISolution.cs" />
-    <Compile Include="cprolog\ITermNode1.cs" />
-    <Compile Include="cprolog\IVarValue.cs" />
-    <Compile Include="cprolog\PrologEgine1.TT.cs" />
-    <Compile Include="cprolog\PrologEngine1.cs" />
-    <Compile Include="cprolog\PrologEngine1.UndefAction.cs" />
-    <Compile Include="cprolog\RelOp1.cs" />
-    <Compile Include="cprolog\Solution1.cs" />
-    <Compile Include="cprolog\SolutionSet1.cs" />
-    <Compile Include="cprolog\SpyPort1.cs" />
-    <Compile Include="cprolog\TermType1.cs" />
-    <Compile Include="cprolog\Variable1.cs" />
+    <Compile Include="Clips\Activation1.cs" />
+    <Compile Include="Clips\ClassMode1.cs" />
+    <Compile Include="Clips\ClipsException1.cs" />
+    <Compile Include="Clips\DataType1.cs" />
+    <Compile Include="Clips\DataTypes\Boolean1.cs" />
+    <Compile Include="Clips\DataTypes\Double1.cs" />
+    <Compile Include="Clips\DataTypes\ExternalObject1.cs" />
+    <Compile Include="Clips\DataTypes\GenericDataType1.cs" />
+    <Compile Include="Clips\DataTypes\InstanceName1.cs" />
+    <Compile Include="Clips\DataTypes\Integer1.cs" />
+    <Compile Include="Clips\DataTypes\Multifield1.cs" />
+    <Compile Include="Clips\DataTypes\String1.cs" />
+    <Compile Include="Clips\DataTypes\Symbol1.cs" />
+    <Compile Include="Clips\Defclass1.cs" />
+    <Compile Include="Clips\Deffacts1.cs" />
+    <Compile Include="Clips\Deffunction1.cs" />
+    <Compile Include="Clips\Defglobal1.cs" />
+    <Compile Include="Clips\Definstances1.cs" />
+    <Compile Include="Clips\DefmessageHandler1.cs" />
+    <Compile Include="Clips\Defmethod1.cs" />
+    <Compile Include="Clips\Defmodule1.cs" />
+    <Compile Include="Clips\Defrule1.cs" />
+    <Compile Include="Clips\Deftemplate1.cs" />
+    <Compile Include="Clips\Degeneric1.cs" />
+    <Compile Include="Clips\Fact1.cs" />
+    <Compile Include="Clips\GenericEnumerator1.cs" />
+    <Compile Include="Clips\Router1.cs" />
+    <Compile Include="Clips\SalienceEvaluation1.cs" />
+    <Compile Include="Clips\SaveScope1.cs" />
+    <Compile Include="Clips\Strategy1.cs" />
+    <Compile Include="Clips\UserFunction1.cs" />
+    <Compile Include="Clips\WatchItem1.cs" />
+    <Compile Include="Clips\Wrapper1.cs" />
+    <Compile Include="CProlog\AbortQueryException1.cs" />
+    <Compile Include="CProlog\AssocType1.cs" />
+    <Compile Include="CProlog\Basiclo.cs" />
+    <Compile Include="CProlog\BI1.cs" />
+    <Compile Include="CProlog\Bootstrap1.cs" />
+    <Compile Include="CProlog\CachePort1.cs" />
+    <Compile Include="CProlog\DosIO1.cs" />
+    <Compile Include="CProlog\DupMode1.cs" />
+    <Compile Include="CProlog\Exctensions1.cs" />
+    <Compile Include="CProlog\FileIO1.cs" />
+    <Compile Include="CProlog\ISolution.cs" />
+    <Compile Include="CProlog\ITermNode1.cs" />
+    <Compile Include="CProlog\IVarValue.cs" />
+    <Compile Include="CProlog\PrologEgine1.TT.cs" />
+    <Compile Include="CProlog\PrologEngine1.cs" />
+    <Compile Include="CProlog\PrologEngine1.UndefAction.cs" />
+    <Compile Include="CProlog\RelOp1.cs" />
+    <Compile Include="CProlog\Solution1.cs" />
+    <Compile Include="CProlog\SolutionSet1.cs" />
+    <Compile Include="CProlog\SpyPort1.cs" />
+    <Compile Include="CProlog\TermType1.cs" />
+    <Compile Include="CProlog\Variable1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Missy.cs" />
@@ -385,6 +393,7 @@
     <Content Include="clips.net.2.0\CLIPSLib.dll" />
     <Content Include="clips.net.2.0\CLIPSNet.dll" />
     <Resource Include="ColorBitmap.bmp" />
+    <Resource Include="Missy.ico" />
     <Content Include="paip\README.html" />
     <Content Include="presets\Missy.avi" />
     <Content Include="prolog.net\CSProlog.dll" />
@@ -420,7 +429,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="system.speech\system.speech.recognition\" />
+    <Folder Include="SystemSpeech\system.speech.recognition\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AIMLbot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
