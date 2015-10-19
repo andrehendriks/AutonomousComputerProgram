@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="300" Foreground="Aquamarine" Background="Aqua" Closing="Window_Closing">
     <Grid>
-        <TextBox x:Name="textBox" Margin="10,236,96,10" TextWrapping="Wrap" Background="Black" Foreground="LightGreen" KeyDown="textBox_KeyDown"/>
-        <TextBlock x:Name="textBlock" Margin="10,10,96,38" TextWrapping="Wrap" Background="Black" Foreground="LightGreen"/>
-        <Button x:Name="button" Content="Button" Margin="211,236,6,13" Click="button_Click"/>
+        <TextBox x:Name="textBox" Margin="10,219,96,10" TextWrapping="Wrap" Background="Black" Foreground="LightGreen" KeyDown="textBox_KeyDown"/>
+        <TextBlock x:Name="textBlock" Margin="10,10,96,55" TextWrapping="Wrap" Background="Black" Foreground="LightGreen"/>
+        <Button x:Name="button" Content="Enter" Margin="204,219,6,10" Click="button_Click"/>
         <Viewbox x:Name="viewbox1" Margin="204,131,6,55">
             <Image x:Name="image" Height="103" Width="100" Source="ColorBitmap.bmp"/>
         </Viewbox>
