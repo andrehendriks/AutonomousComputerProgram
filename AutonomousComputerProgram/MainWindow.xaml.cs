@@ -108,7 +108,7 @@ namespace AutonomousComputerProgram
 
 
             AvatarDescription.CreateRandom(AvatarBodyType.Female);
-            textBox.KeyUp += new System.Windows.Input.KeyEventHandler(textBox_KeyUp);
+            textBox.KeyUp += new System.Windows.Input.KeyEventHandler(textBox_KeyDown);
 
 
             //connector.Find();
@@ -288,7 +288,7 @@ namespace AutonomousComputerProgram
 
         
 
-        private void textBox_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        private void textBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
