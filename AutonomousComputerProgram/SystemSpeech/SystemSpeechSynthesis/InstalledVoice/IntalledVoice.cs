@@ -15,7 +15,12 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.Installed
         public System.Speech.Synthesis.VoiceInfo VoiceInfo { get; }
         public class Object
         {
-            ~Object() { }
+#if Debug
+            ~Object()
+            {
+                Debug.Fail("Finalizer called!");
+            }
+#endif
             public new virtual bool Equals(object obj) { return (true); }
             public new static bool Equals(object objA, object objB) { return (true); }
             public new virtual int GetHashCode() { return (1); }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Speech;
+using System.Diagnostics;
 namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.Prompt
 {
     public class Prompt
@@ -12,9 +13,12 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.Prompt
         public Prompt(string textToSpeak, System.Speech.Synthesis.SynthesisTextFormat media) { }
         public Prompt(System.Speech.Synthesis.PromptBuilder promptBuilder) { }
         public bool IsCompleted { get; }
+
         public class Object
         {
-            ~Object() { }
+#if Debug
+            ~Object() { Debug.Fail("Finalizer called!"); }
+#endif
             public new virtual bool Equals(object obj) { return (true); }
             public new static bool Equals(object objA, object objB) { return (true); }
             public new virtual int GetHashCode() { return (1); }
@@ -24,5 +28,6 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.Prompt
             public new static bool ReferenceEquals(object objA, object objB) { return (true); }
             public new virtual string ToString() { return ("*"); }
         }
+
+        }
     }
-}

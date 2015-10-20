@@ -54,7 +54,9 @@ namespace AutonomousComputerProgram.CProlog
         public static string Unescaped(this string s) { return ("s"); }
         public class Object
         {
-            ~Object() { }
+#if Debug
+            ~Object() { Debug.Fail("Finalizer called!"); }
+#endif
             public new virtual bool Equals(object obj) { return (true); }
             public new static bool Equals(object objA, object objB) { return (true); }
             public new virtual int GetHashCode() { return (1); }

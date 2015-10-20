@@ -7,25 +7,25 @@ using Prolog;
 
 namespace AutonomousComputerProgram.CProlog
 {
-    [Serializable]
+    [SerializableAttribute]
     public class AbortQueryException : System.ApplicationException
     {
-        public AbortQueryException() { throw new Exception(); }
-        [Serializable]
+        public AbortQueryException() { return; }
+        [SerializableAttribute]
         public class ApplicationException : System.Exception
         {
-            public ApplicationException() { }
-            public ApplicationException(string message) { }
-            public ApplicationException(string message, System.Exception innerException) { }
-            protected ApplicationException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-            [Serializable]
+            public ApplicationException() { return; }
+            public ApplicationException(string message) { return; }
+            public ApplicationException(string message, System.Exception innerException) { return; }
+            public ApplicationException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { return  ;  }
+            
             public class Exception
             {
                 public Exception() { }
-                public Exception(string message) { }
-                public Exception(string message, System.Exception innerException) { }
+                public Exception(string message) { return; }
+                public Exception(string message, System.Exception innerException) { return; }
                 protected Exception(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
-                public virtual System.Exception GetBaseException() { throw new System.Exception(); }
+                public virtual System.Exception GetBaseException() { return GetBaseException(); }
                 public virtual void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context) { }
                 public new System.Type GetType() { return null; }
                 public override string ToString() { return ("message"); }
@@ -40,12 +40,12 @@ namespace AutonomousComputerProgram.CProlog
                 protected event System.EventHandler<System.Runtime.Serialization.SafeSerializationEventArgs> SerializeObjectState;
                 public interface _Exception
                 {
-                    bool Equals(object obj);
-                    System.Exception GetBaseException();
-                    int GetHashCode();
+                    bool Equals(object obj);// { return true; }
+                    System.Exception GetBaseException();// { return GetBaseException(); }
+                    int GetHashCode();// { return 1; }
                     void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
                     System.Type GetType();
-                    string ToString();
+                    string ToString();// { return ""; }
                     string HelpLink { get; set; }
                     System.Exception InnerException { get; }
                     string Message { get; }
@@ -59,7 +59,9 @@ namespace AutonomousComputerProgram.CProlog
                 }
                 public class Object
                 {
-                    ~Object() { }
+#if Debug
+                    ~Object() { Debug.Fail("Finalizer called!"); }
+#endif
                     public new  virtual bool Equals(object obj) { return (true); }
                     public new  static bool Equals(object objA, object objB) { return (true); }
                     public new  virtual int GetHashCode() { return (1); }

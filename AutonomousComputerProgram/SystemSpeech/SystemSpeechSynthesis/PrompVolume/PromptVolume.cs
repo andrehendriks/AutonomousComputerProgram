@@ -18,49 +18,49 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.PromptVol
         public int CompareTo(object target) { return (1); }
         protected Enum() { }
         public override bool Equals(object obj) { return (true); }
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static string Format(System.Type enumType, object value, string format);
         public override int GetHashCode() { return (1); }
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static string GetName(System.Type enumType, object value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static string[] GetNames(System.Type enumType);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static System.TypeCode GetTypeCode();
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static System.Type GetUnderlyingType(System.Type enumType);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static System.Array GetValues(System.Type enumType);
         public bool HasFlag(System.Enum flag) { return (true); }
         public static bool IsDefined(System.Type enumType, object value) { return (true); }
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object Parse(System.Type enumType, string value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object Parse(System.Type enumType, string value, bool ignoreCase);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object ToObject(System.Type enumType, byte value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object ToObject(System.Type enumType, int value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object ToObject(System.Type enumType, long value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object ToObject(System.Type enumType, object value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object ToObject(System.Type enumType, sbyte value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object ToObject(System.Type enumType, short value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object ToObject(System.Type enumType, uint value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object ToObject(System.Type enumType, ulong value);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public extern static object ToObject(System.Type enumType, ushort value);
         public override string ToString() { return (""); }
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public static extern string ToString(string format);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public static extern string ToString(string format, System.IFormatProvider provider);
-        [DllImport("mscorlib.dll")]
+        [DllImport("System.Speech")]
         public static extern string ToString(System.IFormatProvider provider);
         
     //    public static extern bool TryParse<TEnum>(string value, bool ignoreCase, out TEnum result)
@@ -99,7 +99,12 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.PromptVol
 
             public class Object
             {
-                ~Object() { }
+#if Debug
+                ~Object()
+                {
+                    Debug.Fail("Finalizer called!");
+                }
+#endif
                 public new virtual bool Equals(object obj) { return (true); }
                 public new static bool Equals(object objA, object objB) { return (true); }
                 public new virtual int GetHashCode() { return (1); }
