@@ -118,3 +118,4 @@ C:\Users\andre\Documents\GitHubVisualStudio\AutonomousComputerProgram\Autonomous
 C:\Users\andre\Documents\GitHubVisualStudio\AutonomousComputerProgram\AutonomousComputerProgram\obj\Debug\AutonomousComputerProgram.csproj.GenerateResource.Cache
 C:\Users\andre\Documents\GitHubVisualStudio\AutonomousComputerProgram\AutonomousComputerProgram\bin\Debug\AutonomousComputerProgram.exe.CodeAnalysisLog.xml
 C:\Users\andre\Documents\GitHubVisualStudio\AutonomousComputerProgram\AutonomousComputerProgram\bin\Debug\AutonomousComputerProgram.exe.lastcodeanalysissucceeded
+C:\Users\andre\Documents\GitHubVisualStudio\AutonomousComputerProgram\AutonomousComputerProgram\obj\Debug\AutonomousComputerProgram.csprojResolveAssemblyReference.cache
