@@ -13,13 +13,10 @@ namespace AutonomousComputerProgram.MindPlay
         public static string GetFriendlyNameFromPortName(string portName) { return (""); }
         public static string GetHardWareIdFromPortName(string portName) { return (""); }
         public HardwareOperation() { }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Interoperability", "CA1401:PInvokesShouldNotBeVisible")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Interoperability", "CA1400:PInvokeEntryPointsShouldExist")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1060:MovePInvokesToNativeMethodsClass")]
-        [DllImport("ThinkGear")]
-        public static extern bool SetupDiDestroyDeviceInfoList(System.IntPtr lpInfoSet);
-        [DllImport("Thinkgear")]
-        public static extern bool SetupDiEnumDeviceInfo(System.IntPtr lpInfoSet, uint dwIndex, HardwareOperation.SP_DEVINFO_DATA devInfoData);
+//        [DllImport("ThinkGear")]
+        public static  bool SetupDiDestroyDeviceInfoList(System.IntPtr lpInfoSet) { return true; }
+//        [DllImport("Thinkgear")]
+        public static bool SetupDiEnumDeviceInfo(System.IntPtr lpInfoSet, uint dwIndex, HardwareOperation.SP_DEVINFO_DATA devInfoData) { return true; }
         [DllImport("Thinkgear")]
         public static extern System.IntPtr SetupDiGetClassDevs(ref System.Guid gClass, string enumerator, System.IntPtr hParent, uint nFlags);
         [DllImport("Thinkgear")]

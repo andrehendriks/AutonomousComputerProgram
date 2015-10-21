@@ -17,8 +17,8 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.Synthesis
         public int CompareTo(object target) { return (1); }
         protected Enum() { }
         public override bool Equals(object obj) { return (true); }
-       [DllImport("System.Speech")]
-        public extern static string Format(System.Type enumType, object value, string format);
+     //  [DllImport("System.Speech")]
+        public static string Format(System.Type enumType, object value, string format) { return ""; }
         public override int GetHashCode() { return (1); }
        [DllImport("System.Speech")]
         public extern static string GetName(System.Type enumType, object value);
