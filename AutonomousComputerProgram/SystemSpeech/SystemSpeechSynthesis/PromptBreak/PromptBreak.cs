@@ -23,8 +23,9 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.PromptBre
         public override int GetHashCode() { return (1); }
 //        [DllImport("System.Speech")]
         public static string GetName(System.Type enumType, object value) { return ""; }
-//        [DllImport("System.Speech")]
-        public static string GetNames(System.Type enumType) { return ""; }
+        [DllImport("Thinkgear", CharSet = CharSet.Unicode)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern string[] GetNames(System.Type enumType); //{  }
         [DllImport("System.Speech")]
         public static extern System.TypeCode GetTypeCode();
         [DllImport("System.Speech")]

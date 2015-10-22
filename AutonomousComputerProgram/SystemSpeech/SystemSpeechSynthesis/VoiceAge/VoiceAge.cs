@@ -21,9 +21,10 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.VoiceAge
 //        [DllImport("System.Speech")]
         public static string Format(System.Type enumType, object value, string format) { return ""; }
         public override int GetHashCode() { return (1); }
-        [DllImport("System.Speech")]
-        public extern static string GetName(System.Type enumType, object value);
-        [DllImport("System.Speech")]
+//        [DllImport("System.Speech")]
+        public static string GetName(System.Type enumType, object value) { return ""; }
+        [DllImport("Thinkgear", CharSet = CharSet.Unicode)]
+        [return: MarshalAs(UnmanagedType.Bool)]
         public extern static string[] GetNames(System.Type enumType);
         [DllImport("System.Speech")]
         public static extern System.TypeCode GetTypeCode();

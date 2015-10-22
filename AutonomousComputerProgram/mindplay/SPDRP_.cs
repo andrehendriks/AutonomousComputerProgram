@@ -19,12 +19,14 @@ namespace AutonomousComputerProgram.MindPlay
         public static string Format(System.Type enumType, object value, string format) { return ("*"); }
         public override int GetHashCode() { return (1); }
         public static string GetName(System.Type enumType, object value) { return ("*"); }
-//        [DllImport("Thinkgear")]
+//        [DllImport("Thinkgear", CharSet = CharSet.Unicode)]
+//        [return: MarshalAs(UnmanagedType.Bool)]
         public static string GetNames(System.Type enumType) { return ""; }
         //[DllImport("Thinkgear")]
         public System.TypeCode GetTypeCode() { return(0); }
-        [DllImport("Thinkgear")]
-        public static extern System.Type GetUnderlyingType(System.Type enumType); //{ return(0); }
+        [DllImport("Thinkgear", CharSet = CharSet.Unicode)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern System.Type GetUnderlyingType(System.Type enumType); //{ return (true); }
         [DllImport("Thinkgear")]
         public static extern System.Array GetValues(System.Type enumType); //{ return (0); }
         public bool HasFlag(System.Enum flag) { return true; }
