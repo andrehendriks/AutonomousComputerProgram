@@ -21,8 +21,8 @@ namespace AutonomousComputerProgram.MindPlay
         private static extern System.IntPtr SetupDiGetClassDevs(ref System.Guid gClass, string enumerator, System.IntPtr hParent, uint nFlags);
 //        [DllImport("Thinkgear")]
         public static bool SetupDiGetDeviceInstanceId(System.IntPtr DeviceInfoSet, HardwareOperation.SP_DEVINFO_DATA DeviceInfoData, System.Text.StringBuilder DeviceInstanceId, uint DeviceInstanceIdSize, uint RequiredSize) { return true; }
-        [DllImport("Thinkgear")]
-        public static extern bool SetupDiGetDeviceRegistryProperty(System.IntPtr lpInfoSet, HardwareOperation.SP_DEVINFO_DATA DeviceInfoData, uint Property, uint PropertyRegDataType, System.Text.StringBuilder PropertyBuffer, uint PropertyBufferSize, System.IntPtr RequiredSize);
+//        [DllImport("Thinkgear")]
+        public static bool SetupDiGetDeviceRegistryProperty(System.IntPtr lpInfoSet, HardwareOperation.SP_DEVINFO_DATA DeviceInfoData, uint Property, uint PropertyRegDataType, System.Text.StringBuilder PropertyBuffer, uint PropertyBufferSize, System.IntPtr RequiredSize) { return true; }
         public const int DIGCF_ALLCLASSES = 1;
         public const int DIGCF_DEVICEINTERFACE = 2;
         public const int DIGCF_PRESENT = 3;

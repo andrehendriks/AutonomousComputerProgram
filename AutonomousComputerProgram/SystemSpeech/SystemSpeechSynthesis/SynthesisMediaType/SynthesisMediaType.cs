@@ -20,10 +20,10 @@ namespace AutonomousComputerProgram.SystemSpeech.SystemSpeechSynthesis.Synthesis
      //  [DllImport("System.Speech")]
         public static string Format(System.Type enumType, object value, string format) { return ""; }
         public override int GetHashCode() { return (1); }
-       [DllImport("System.Speech")]
-        public extern static string GetName(System.Type enumType, object value);
-       [DllImport("System.Speech")]
-        public extern static string[] GetNames(System.Type enumType);
+       
+        public static string GetName(System.Type enumType, object value) { return ""; }
+       
+        public static string GetNames(System.Type enumType) { return ""; }
        [DllImport("System.Speech")]
         public static extern System.TypeCode GetTypeCode();
        [DllImport("System.Speech")]
